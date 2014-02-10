@@ -1,0 +1,13 @@
+addDefaultCharset utf-8
+DirectoryIndex index.php index.html index.htm
+
+RewriteEngine   on
+Options +FollowSymlinks
+
+## Thumbnails
+#
+#RewriteRule ^thumb.php$ thumb.php [L]
+  RewriteCond %{QUERY_STRING} w=[0-9]+ [OR]
+  RewriteCond %{QUERY_STRING} h=[0-9]+ [OR]
+  RewriteCond %{QUERY_STRING} ^tc?$
+  RewriteRule ^(.*)\.(jpg|gif|png) thumb.php?name=%{REQUEST_FILENAME}&%{QUERY_STRING} [NC,L]

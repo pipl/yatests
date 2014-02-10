@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .result {
+            padding: 1em 1.2em;
+            background-color: #E3EBFF;
+        }
+        </style>
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="js.js"></script>
+        
+    </head>
+    <body>
+        <h2>ТЗ № 2.3 (по JS)</h2>
+        <p>
+            Допустим, параметры http-запроса хранятся как свойства объекта.
+            <br/>
+            Напишите функцию сериализации параметров в query-строку с добавлением к произвольному url.
+        </p>
+        <div class="result">
+            <a href="js.js">Файл js</a>
+            <p>
+                Результат сериализации параметров отличается от jQuery.param 
+                <ul>
+                    <li>Функции не вычисляются</li>
+                    <li>Для массивов лишние элементы не создаются</li>
+                </ul>
+            </p>
+        </div>
+        <hr/>
+        <p>
+            Выполните в консоли следующий код:
+        </p>
+        <xmp>
+var test = {
+    'o': {},
+    'O': new Object,
+    'a': [],
+    's': 'str',
+    'S': new String('qqq'),
+    'n': 123,
+    'N': new Number(456),
+    'b': true,
+    'B': new Boolean(true),
+    'd': new Date,
+    'f': function(){this.poo = 90; return 1},
+    'F': new Function('return 1'),
+    'r': /\d/,
+    'R': new RegExp('\d+', 'g')
+};
+getUrl('http://example.com:8080/path/to/script.php?a=15#uuu', test);
+        </xmp>
+    </body>
+</html>

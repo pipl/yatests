@@ -1,0 +1,52 @@
+.pdiff {
+    width: 600px;
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-size: 12px;
+}
+
+.controls table {
+    width: 100%;
+}
+.controls td {
+    width: 50%;
+}
+.controls textarea {
+    width: 100%;
+    height: 100px;
+}
+
+.pdiff .result table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.pdiff .result td,  .pdiff .result th  {
+    border: 1px solid #ddd;
+}
+.pdiff .result th {
+    background-color: #eee;
+}
+
+
+.pdiff .result .value {
+    width: 30%;
+    /*
+    font-family: Courier new;
+    */
+}
+.pdiff .result .value.undefined {
+    font-weight: bold;
+    font-style: italic;
+    font-size: .8em;
+    color: #aaa;
+    color: red;
+}
+.pdiff .result .value.empty {
+    font-weight: bold;
+    font-style: italic;
+    font-size: .8em;
+    color: #aaa;
+}
+.pdiff .result .value .pre {
+    border: 1px solid #ddd;
+    display: inline-block;
+}

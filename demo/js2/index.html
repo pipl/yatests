@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        body {
+            
+        }
+        .files {
+            padding: 1em 1.2em;
+            background-color: #E3EBFF;
+        }
+        </style>
+        <link rel="stylesheet" href="css/pdiff.css" type="text/css" media="screen" />
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
+        <script src="js/HttpParams.js"></script>
+        <script src="js/pdiff.js"></script>
+        <script>
+        $(function () {
+            $('.pdiff').pdiff();
+        });
+        </script>
+    </head>
+    <body>
+        <h2>ТЗ № 2.2 (по JS)</h2>
+        <p>
+            Напишите систему сравнения двух наборов параметров форм (включая html-интерфейс).
+            <br/>
+            Имена параметров могут повторяться.
+            <br/>
+            Система должна отвечать на вопрос: «Что изменилось в параметрах?».
+        </p>
+        <div class="files">
+            <a href="js/pdiff.js">Файл pdiff.js</a>
+            <br>
+            <a href="js/HttpParams.js">Файл HttpParams.js</a>
+        </div>
+        <hr/>
+        
+        <div class="pdiff">
+            <form class="controls">
+                <p>
+                Введите запросы вида "<b>a=qq&t=999</b>" в поля "Left query" и "Right query" и нажмите кнопку "Найти отличия"
+                </p>
+                <table>
+                    <tr>
+                        <td>
+                            <div>Left query:</div>
+                            <textarea name="left[query]"></textarea>
+                        </td>
+                        <td>
+                            <div>Right query:</div>
+                            <textarea name="right[query]"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="Найти отличия">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <div class="result"></div>
+        </div>
+    </body>
+</html>
